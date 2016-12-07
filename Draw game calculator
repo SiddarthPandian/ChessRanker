@@ -1,0 +1,113 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+/**
+ * Write a description of class ranker here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class ranker
+{
+    public static void main (String [] args)
+    {
+        Scanner scan = new Scanner (System.in);
+        ArrayList <String> names = new ArrayList <String> ();
+        names.add("sid");
+        names.add("jack");
+        names.add("noob");
+        names.add("pro");
+        names.add("nick");
+        
+        ArrayList <Integer> scores = new ArrayList <Integer> ();
+        scores.add(1500);
+        scores.add(1200);
+        scores.add(300);
+        scores.add(2000);
+        scores.add(100);
+        
+        System.out.println("is it a tie game");
+        String tie = scan.nextLine();
+        
+        if (tie.equalsIgnoreCase("y"))
+        {
+            System.out.println("name the players. Make sure that the greater score comes first");
+            System.out.println("Player 1:");
+            String player1 = scan.nextLine();
+            System.out.println("Player 2:");
+            String player2 = scan.nextLine();
+            
+            int Nameplace1 = names.indexOf(player1);
+            int Nameplace2 = names.indexOf(player2);
+            
+            int score1 = scores.get(Nameplace1);
+            int score2 = scores.get(Nameplace2);
+            
+            if (score1 - score2 >= 0 && score1 - score2 <= 11)
+            {
+                System.out.println(player1 + ": " + score1);
+                System.out.println(player2 + ": " + score2);
+            }
+            if (score1 - score2 >= 12 && score1 - score2 <= 33)
+            {
+                System.out.println(player1 + ": " + (score1 - 1));
+                System.out.println(player2 + ": " + (score2 + 1));
+            }
+            if (score1 - score2 >= 34 && score1 - score2 <= 55)
+            {
+                System.out.println(player1 + ": " + (score1 - 2));
+                System.out.println(player2 + ": " + (score2 + 2));
+            }
+            if (score1 - score2 >=56 && score1 - score2 <= 77)
+            {
+                System.out.println(player1 + ": " + (score1 - 3));
+                System.out.println(player2 + ": " + (score2 +3));
+            }
+            if (score1 - score2 >= 78 && score1 - score2 <= 100)
+            {
+                System.out.println(player1 + ": " + (score1 - 4));
+                System.out.println(player2 + ": " + (score2 + 4));
+            }
+            if (score1 - score2 >= 101 && score1 - score2 <= 125)
+            {
+                System.out.println(player1 + ": " + (score1 - 5));
+                System.out.println(player2 + ": " + (score2 + 5));
+            }
+            if (score1 - score2 >= 126 && score1 - score2 <= 150)
+            {
+                System.out.println(player1 + ": " + (score1 - 6));
+                System.out.println(player2 + ": " + (score2 + 6));
+            }
+            if (score1 - score2 >= 151 && score1 - score2 <= 176)
+            {
+                System.out.println(player1 + ": " + (score1 - 7));
+                System.out.println(player2 + ": " +( score2 +7 ));
+            }
+            if (score1 - score2 >= 177 && score1 - score2 <= 205)
+            {
+                System.out.println(player1 + ": " + (score1 -8 ));
+                System.out.println(player2 + ": " + (score2 + 8));
+            }
+            if (score1 - score2 >= 206 && score1 - score2 <= 238)
+            {
+                System.out.println(player1 + ": " + (score1 - 9));
+                System.out.println(player2 + ": " + (score2 + 9));
+            }
+            if (score1 - score2 >= 239 && score1 - score2 <= 272)
+            {
+                System.out.println(player1 + ": " + (score1 - 10));
+                System.out.println(player2 + ": " + (score2 + 10));
+            }
+            if (score1 - score2 >=273 && score1 - score2 <= 314)
+            {
+                System.out.println(player1 + ": " + (score1 - 11));
+                System.out.println(player2 + ": " + (score2 + 11));
+            }
+            if (score1 - score2 >= 315)
+            {
+                System.out.println(player1 + ": " + (score1 -12));
+                System.out.println(player2 + ": " + (score2 + 12));
+            }
+        }
+        
+    }
+}
